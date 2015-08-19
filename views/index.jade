@@ -12,6 +12,8 @@ block content
                     label(for="shareUrl").col-sm-3.control-label.share-label Share URL:
                     .col-sm-9
                         input(type='text', data-room=share, name='shareUrl', value=shareURL ReadOnly).form-control
+                    .col-sm-9
+                        img( data-room=share, name='shareUrl', src='http://lisiyizu-qrcode.herokuapp.com/png?text='+shareURL)
             .col-xs-3
                 .p2-score
                     p 0
