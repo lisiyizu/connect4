@@ -1,7 +1,7 @@
 var express = require('express');
 var async = require('async');
 var app = express()
-var io = require('socket.io').listen(app.listen(3000));
+var io = require('socket.io').listen(app.listen( process.env.PORT || 3000));
 
 app.use('/static', express.static(__dirname + '/static'));
 
