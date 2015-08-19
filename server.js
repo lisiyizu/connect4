@@ -1,8 +1,8 @@
 var express = require('express');
 var async = require('async');
-var app = express(),
-    server = require('http').createServer(app),
-    io = require('socket.io').listen(server);
+var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
 server.listen( process.env.PORT || 5000)
 

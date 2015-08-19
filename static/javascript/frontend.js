@@ -11705,7 +11705,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
         }
     }
 
-    var socket = io.connect('localhost');
+    var socket = io.connect();
 
     function Player(room, pid) {
         this.room = room;
