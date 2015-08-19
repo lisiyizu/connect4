@@ -1,7 +1,10 @@
 var express = require('express');
 var async = require('async');
-var app = express()
-var io = require('socket.io').listen(app.listen( process.env.PORT || 3000));
+var app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server);
+
+server.listen( process.env.PORT || 4000)
 
 app.use('/static', express.static(__dirname + '/static'));
 
@@ -245,4 +248,4 @@ io.sockets.on('connection', function(socket) {
     });
 });
 
-console.log('Listening on port 8000');
+console.log('Listening on port 4000');
